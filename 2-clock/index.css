@@ -1,0 +1,83 @@
+html {
+  font-family: helvetica neue;
+  text-align: center;
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  flex: 1;
+  min-width: 100vh;
+  align-items: center;
+}
+
+.morning {
+  background: linear-gradient(to right, rgb(44, 62, 80), rgb(52, 152, 219));
+}
+
+.day {
+  background: linear-gradient(to right, rgb(131, 164, 212), rgb(182, 251, 255));
+}
+
+.afternoon {
+  background: linear-gradient(to right, rgb(247, 151, 30), rgb(255, 210, 0));
+}
+
+.sunset {
+  background: linear-gradient(to right, rgb(233, 100, 67), rgb(144, 78, 149));
+}
+
+.night {
+  background: linear-gradient(to right, rgb(35, 37, 38), rgb(65, 67, 69));
+}
+
+.clock {
+  background: #fff;
+  width: 30rem;
+  height: 30rem;
+  border: 20px solid black;
+  border-radius: 50%;
+  margin: 50px auto;
+  position: relative;
+  padding: 2rem;
+  box-shadow: 
+  0 0 0 4px rgba(0, 0, 0, .1),
+  inset 0 0 0 3px #efefef,
+  inset 0 0 10px black,
+  0 0 10px rgba(0, 0, 0, .2);
+}
+
+.clock-face {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform: translateY(-3px); /* account for the height of the clock hands */
+}
+
+.hand {
+  width: 50%;
+  height: 6px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  transform-origin: 100%; /* Every element has an origin, the anchor that the transform functions execute from. Before that. it would rotate itself in the exact middle of the element (50% default). -> Josh Comeau*/
+  transform: rotate(90deg); /* Rotate to position my pointers at 12h */
+  transition: all 0.5s;
+  transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1); /* To giv tic-tac animation */
+}
+
+.second-hand {
+  background: red;
+  height: 1px;
+}
+
+.hour-hand {
+  box-sizing: border-box;
+  width: 50%;
+  background: white;
+  transform-origin: 100%;
+  border-right: 85px solid black;
+  border-top: none;
+}
