@@ -1,0 +1,44 @@
+.circle {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  display: inline-block;
+
+  vertical-align: text-bottom;
+}
+
+.square {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #000000;
+  display: inline-block;
+
+  vertical-align: middle;
+}
+
+.text-container {
+  display: inline-block;
+}
+
+.text-container .circle {
+  vertical-align: middle;
+}
+
+.result {
+  display: inline-block;
+}
+
+p {
+  font-size: 1.7rem;
+  letter-spacing: 0.1rem;
+
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.button-container {
+  display: inline-block;
+  margin: 0 12px;
+  
+}
